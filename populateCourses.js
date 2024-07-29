@@ -1,18 +1,18 @@
 const mongoose = require("mongoose");
 const { MongoClient } = require("mongodb");
 const path = require("path"); // Import path module
-const Course = require(path.join(__dirname, "server", "models", "course")); // Correct path to your Course model
-const courses = require("./data/courses"); // Adjust path if necessary
-console.log(Course); // Add this line to check if Course is correctly defined
+const Course = require(path.join(__dirname, "server", "models", "course")); 
+const courses = require("./data/courses"); 
+console.log(Course); 
 
-const uri = "mongodb://127.0.0.1:27017"; // Replace with your MongoDB URI if different
+const uri = "mongodb://127.0.0.1:27017"; 
 const client = new MongoClient(uri, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
 
-const databaseName = "mern-app"; // Replace with your database name
-const collectionName = "courses"; // Replace with your collection name
+const databaseName = "mern-app"; 
+const collectionName = "courses"; 
 
 async function run() {
   try {
